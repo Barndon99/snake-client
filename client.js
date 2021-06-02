@@ -17,11 +17,6 @@ const connect = function () {
     conn.write('Name: BR');
   });
 
-  conn.on('connect', () => {
-    conn.write('Move: up');
-    setTimeout(() => {conn.write('Move: left')}, 1000);
-  });
-
   conn.on('data', (data) => {
     console.log('This data is coming from server: ', data);
   });
